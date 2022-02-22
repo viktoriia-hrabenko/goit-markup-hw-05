@@ -61,6 +61,8 @@ img {
 .address-contact-link-phone:hover,
 .address-contact-link-phone:focus {
   color: var(--main-color);
+  transition: color 250ms; 
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn,
@@ -139,6 +141,34 @@ img {
   line-height: 1.143;
   letter-spacing: 0.02em;
   color: #212121;
+  transition: color 250ms 
+  cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  display: flex;
+  width: 53px;
+  height: 4px;
+  margin-top: 28px;
+  background: #2196f3;
+  border-radius: 2px;
+  transition: color 250ms; 
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-active-port::after {
+  content: "";
+  position: absolute;
+  display: flex;
+  width: 58px;
+  height: 4px;
+  margin-top: 28px;
+  background: #2196f3;
+  border-radius: 2px;
+  transition: color 250ms; 
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-link-mail,
@@ -149,6 +179,8 @@ img {
   line-height: 1.143;
   letter-spacing: 0.02em;
   color: var(--secondary-color);
+  transition: color 250ms; 
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-link-phone {
@@ -168,6 +200,8 @@ img {
 .mail-icon:hover,
 .phone-icon:hover {
   fill: var(--main-color);
+  transition: fill 250ms; 
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ############## Koniec sekcji HEADER ############## */
@@ -341,6 +375,25 @@ img {
 .about-list-item:not(:last-child) {
   margin-right: 30px;
 }
+
+.thumb > .label {
+  position: absolute;
+  display: flex;
+  margin-top: 224px;
+  width: 370px;
+  height: 70px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(47, 48, 58, 0.8);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
 /* ############## Koniec sekcji Czym się zajmujemy ############## */
 
 /* ############## Nasz zespól ############## */
@@ -428,6 +481,10 @@ img {
 .social-list-link-footer:focus {
   fill: #ffffff;
   background-color: var(--main-color);
+  transition: fill 250ms; 
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms; 
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-links-list-item {
@@ -509,6 +566,10 @@ img {
 .logo-icon:focus {
   fill: var(--main-color);
   border-color: var(--main-color);
+  transition: fill 250ms; 
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms; 
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*############## Koniec Nasi klijenci ###############*/
@@ -639,6 +700,12 @@ img {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   color: #ffffff;
+  transition: color 250ms; 
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background 250ms; 
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .all-btn {
@@ -687,6 +754,11 @@ img {
   box-sizing: border-box;
   flex-basis: calc(100% / 3 - 30px);
   margin-left: -30px;
+  overflow: hidden;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: box-shadow;
+  transition-duration: 250ms, 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects-list-item:nth-child(-n + 6) {
@@ -697,6 +769,46 @@ img {
 .projects-list-item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+    transform: translateY(0);
+    transition: box-shadow 250ms; 
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.box {
+  position: relative;
+  width: 370px;
+  height: 294px;
+  overflow: hidden;
+}
+
+
+.box:hover .overlay {
+  transform: translateY(0);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 250ms ease;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: Roboto;
+  text-align: left;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  padding-top: 49px;
+  padding-left: 24px;
+  padding-right: 45px;
+  padding-bottom: 49px;
 }
 
 .project-name {
@@ -722,21 +834,55 @@ img {
 
 /*##################### END PORTFOLIO #################*/
 
-
 /*###########BACKDROP#############*/
 .modal {
   position: absolute;
-  height: 80vh;
-  width: 90vw;
-  max-height: 580px;
-  max-width: 528px;
-  overflow-y: auto;
   top: 50%;
   left: 50%;
+  width: 528px;
+  height: 581px;
+  overflow-y: auto;
   transform: translate(-50%, -50%);
+  transform-origin: center center;
+  animation: animateModal 1000ms 1000ms;
   background-color: #ffffff;
-  box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%), 0px 2px 1px rgb(0 0 0 / 20%);
+  box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
+    0px 2px 1px rgb(0 0 0 / 20%);
   border-radius: 4px;
+}
+
+@keyframes animateModal {
+  0% {
+    transform: translate(-50%, -50%) scale(0), rotate3d(0, 0, 1, 0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1), rotate3d(0, 0, 1, 720deg);
+  }
+}
+
+.close-btn {
+  position: absolute;
+  display: flex;
+  width: 30px;
+  height: 30px;
+  top: 8px;
+  right: 8px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .is-hidden {
