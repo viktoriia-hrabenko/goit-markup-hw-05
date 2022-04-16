@@ -257,6 +257,11 @@ img {
   height: 50px;
 }
 
+.btn:hover {
+  transition: 
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .features-list {
   display: flex;
   flex-wrap: wrap;
@@ -408,6 +413,7 @@ img {
   background-size: 100%;
   height: 648px;
   margin-top: 94px;
+  padding-bottom: 94px;
 }
 
 .team-list {
@@ -662,9 +668,6 @@ img {
 /*##################### END FOOTER #################*/
 
 /*##################### PORTFOLIO #################*/
-.page {
-  /* background: #E5E5E5;*/
-}
 
 .buttons-list {
   display: inline-flex;
@@ -749,7 +752,6 @@ img {
   width: 370px;
   height: 404px;
   background: #ffffff;
-  border: 1px solid #eeeeee;
   box-sizing: border-box;
   flex-basis: calc(100% / 3 - 30px);
   margin-left: -30px;
@@ -807,6 +809,10 @@ img {
   padding-left: 24px;
   padding-right: 45px;
   padding-bottom: 49px;
+}
+
+.card {
+  border: 1px solid #eeeeee;
 }
 
 .project-name {
